@@ -3,37 +3,27 @@
 WorkerTimers wrapper to count and save duration into localStorage
 
 ## Installation
+
 ```
 npm install --save persistent-duration
 ```
 
 ## Usage
+
 ```javascript
 import * as duration from 'persistent-duration'
-```
 
-## Available methods
-
-### `start()`
-Set an interval on worker, func will increment the duration every 1000ms
-
-```javascript
+// Set an interval on worker, func will increment the duration every 1000ms
 const intervalId = duration.start()
-```
 
-### `stop(id)`
-Stop the interval
-
-```javascript
+// Stop the interval.
+// Keep in mind that duration still persists even though
+// you have stopped the interval
 duration.stop(intervalId)
-```
 
-### `get()`
-Get current duration. Returns a number
+// Get duration (returns a number)
+duration.get()
 
-### `clear()`
-Remove duration from `localStorage`
-
-```javascript
+// Remove duration from localStorage
 duration.clear()
 ```

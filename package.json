@@ -1,6 +1,6 @@
 {
   "name": "persistent-duration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " WorkerTimers wrapper to count and save duration into localStorage",
   "main": "index.js",
   "scripts": {
