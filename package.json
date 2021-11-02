@@ -1,0 +1,27 @@
+{
+  "name": "persistent-duration",
+  "version": "1.0.0",
+  "description": " WorkerTimers wrapper to count and save duration into localStorage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmtrxw/persistent-duration.git"
+  },
+  "author": "Dimitri Wahyudiputra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmtrxw/persistent-duration/issues"
+  },
+  "homepage": "https://github.com/dmtrxw/persistent-duration#readme",
+  "dependencies": {
+    "worker-timers": "^7.0.40"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
