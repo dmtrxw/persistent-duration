@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.clear = exports.stop = exports.start = exports.get = undefined;
+exports.clear = exports.reset = exports.stop = exports.start = exports.get = undefined;
 
 var _workerTimers = require('worker-timers');
 
@@ -21,7 +21,7 @@ var get = exports.get = function get() {
 var start = exports.start = function start() {
     return workerTimers.setInterval(function () {
         if (!get()) {
-            localStorage.setItem(key, 0);
+            reset();
         }
         localStorage.setItem(key, get() + 1);
     }, 1000);
@@ -29,6 +29,10 @@ var start = exports.start = function start() {
 
 var stop = exports.stop = function stop(id) {
     workerTimers.clearInterval(id);
+};
+
+var reset = exports.reset = function reset() {
+    localStorage.setItem(key, 0);
 };
 
 var clear = exports.clear = function clear() {
